@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>@fabiotavarespr</title>
-    <link>https://fabiotavarespr.github.io/</link>
-    <description>Recent content on @fabiotavarespr</description>
+    <title>Posts on @fabiotavarespr</title>
+    <link>https://fabiotavarespr.github.io/posts/</link>
+    <description>Recent content in Posts on @fabiotavarespr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
     <lastBuildDate>Fri, 29 May 2020 20:07:38 -0300</lastBuildDate>
     
-	<atom:link href="https://fabiotavarespr.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fabiotavarespr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://fabiotavarespr.github.io/posts/o-primeiro-passo/</guid>
       <description>Para quem não me conhece, meu nome é Fabio. Seja bem-vindo a esse humilde blog.</description>
-    </item>
-    
-    <item>
-      <title>Sobre</title>
-      <link>https://fabiotavarespr.github.io/about/</link>
-      <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.github.io/about/</guid>
-      <description>Tenho mais de 16 anos de experiência profissional na área de TI.</description>
     </item>
     
   </channel>
