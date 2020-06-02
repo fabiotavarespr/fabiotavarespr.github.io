@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on @fabiotavarespr</title>
-    <link>https://fabiotavarespr.github.io/posts/</link>
+    <link>https://fabiotavarespr.dev/posts/</link>
     <description>Recent content in Posts on @fabiotavarespr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
     <lastBuildDate>Fri, 29 May 2020 20:07:38 -0300</lastBuildDate>
     
-	<atom:link href="https://fabiotavarespr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fabiotavarespr.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>O Primeiro Passo</title>
-      <link>https://fabiotavarespr.github.io/posts/o-primeiro-passo/</link>
+      <link>https://fabiotavarespr.dev/posts/o-primeiro-passo/</link>
       <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
       
-      <guid>https://fabiotavarespr.github.io/posts/o-primeiro-passo/</guid>
+      <guid>https://fabiotavarespr.dev/posts/o-primeiro-passo/</guid>
       <description>Para quem não me conhece, meu nome é Fabio. Seja bem-vindo a esse humilde blog.</description>
     </item>
     
