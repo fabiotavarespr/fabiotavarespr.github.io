@@ -162,7 +162,7 @@ footer {
 }
 
 .sidebar {
-  background-color: #49757a;
+  background-color: #328998;
   color: #fff;
 }
 
@@ -174,7 +174,7 @@ footer {
 footer a,
 .content a,
 .related-posts li a:hover {
-  color: #49757a;
+  color: #328998;
 }
 
 .read-more-link {
@@ -184,7 +184,7 @@ footer a,
 .read-more-link a {
   padding: 8px 16px;
   border: 1px solid;
-  border-color: #49757a;
+  border-color: #328998;
   border-radius: 4px;
 }
 
@@ -239,20 +239,20 @@ ul.posts {
   line-height: 1.5;
   text-align: center;
   text-decoration: none;
-  color: #49757a;
-  border: 1px solid #49757a;
+  color: #328998;
+  border: 1px solid #328998;
   border-radius: 0;
 }
 
 .pagination li a:hover {
   color: #fff;
-  background-color: #49757a;
+  background-color: #328998;
   opacity: 0.75;
 }
 
 .pagination li.active a {
   color: #fff;
-  background-color: #49757a;
+  background-color: #328998;
 }
 
 .pagination li.disabled a {
