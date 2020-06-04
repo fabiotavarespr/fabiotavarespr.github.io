@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <title>Introdução a sistema de versionamento - SCM &middot; @fabiotavarespr</title>
+
+  <meta name="description" content="Introdução a sistema de versionamento" />
+
+  
+
+<meta itemprop="name" content="Introdução a sistema de versionamento - SCM">
+<meta itemprop="description" content="Introdução a sistema de versionamento">
+<meta itemprop="datePublished" content="2020-06-03T20:23:05-03:00" />
+<meta itemprop="dateModified" content="2020-06-03T20:23:05-03:00" />
+<meta itemprop="wordCount" content="754">
+
+
+
+<meta itemprop="keywords" content="git,versionamento," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Introdução a sistema de versionamento - SCM"/>
+<meta name="twitter:description" content="Introdução a sistema de versionamento"/>
+
+
+<meta property="og:title" content="Introdução a sistema de versionamento - SCM" />
+<meta property="og:description" content="Introdução a sistema de versionamento" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fabiotavarespr.dev/posts/introducao-git/" />
+<meta property="article:published_time" content="2020-06-03T20:23:05-03:00" />
+<meta property="article:modified_time" content="2020-06-03T20:23:05-03:00" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://fabiotavarespr.dev/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://fabiotavarespr.dev/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://fabiotavarespr.dev/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="https://fabiotavarespr.dev/css/blog.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="favicon"
+        sizes="144x144"
+        href="/favicon.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://fabiotavarespr.dev/images/avatar.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>@fabiotavarespr</h1>
+
+      
+      <p class="lead">DevOps</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://fabiotavarespr.dev/">Inicial</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> Sobre </a>
+        </li><li>
+          <a href="https://fabiotavarespr.github.io/resume"> Currículo </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/fabiotavarespr/" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/fabiotavarespr" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="http://instagram.com/fabiotavarespr" rel="me" title="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/fabiotavarespr" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Introdução a sistema de versionamento - SCM</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-03T20:23:05-0300">Jun 3, 2020</time> · 4 min read
+  </div>
+  <p><strong>Introdução a sistema de versionamento</strong></p>
+  <p></p>
+
+  <p>Vejo situações que desenvolvedores ou pessoas da área de tecnologia começarem a usar algo para resolver um problema ou porque está todo mundo usando, e nem param para entender sobre a origem daquilo.</p>
+<p>Um desses casos é o <a href="https://git-scm.com/"><em>git</em></a>.</p>
+<p>É muito comum novatos começarem a usar o <a href="https://github.com/about">github</a> ou <a href="https://about.gitlab.com/">gitlab</a>, porque na empresa que estão iniciando ou no estágio que estão fazendo todos usam para versionar o código fonte, fazem um monte de comandos, como, git clone, git add, git commit, git pull e git push, mas no fundo, nem entendem o que estão fazendo, só olham o amiguinho do lado fazendo, pedem uma ajuda e fazem igual.</p>
+<p>Mas vamos lá? Git, github e gitlab são as mesmas coisas?</p>
+<p>A resposta é não.</p>
+<p>Para explicar melhor, vamos começar falando sobre <a href="https://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%B5es">sistema de controle de versão</a> (ou versionamento) ou ainda SCM (do inglês source code management) .</p>
+<p>Antigamente, no início da computação não existia toda essa tecnologia que estamos acostumados no nosso dia-a-dia como internet, wifi ou rede de computador. Para escrever um programa, as pessoas escreviam um arquivo no computador, para outra pessoa ter acesso, precisava gravar em um disquete, levar até a outra pessoa, entregar o disquete e assim passar para o outro computador.</p>
+<p><img src="https://fabiotavarespr.dev/images/disquete.png" alt="Disquete"></p>
+<p>Para desenvolver sistemas e trabalhar em equipe, isso era inviável, com o tempo surgiu a rede de computador e era possível enviar arquivos pela rede e os disquetes foram saindo de cena.</p>
+<p>Surgiu então o sistema de versionamento, eles funcionavam de forma centralizada/linear, onde existia um único repositório para todos os participantes, você precisa estar conectado em um servidor para enviar os arquivos ou para pegar arquivos criados/alterados por outra pessoa.</p>
+<p>{Imagem versionamento centralizado.}</p>
+<p>Alguns dos sistemas de versionamentos centralizados mais conhecidos são <a href="https://savannah.nongnu.org/projects/cvs">CVS</a> e <a href="https://subversion.apache.org/">SVN</a>.
+Porém o grande problema desse tipo de SCM é caso a rede esteja indisponível ou caso o servidor esteja fora do ar, você não poderia versionar código ou pegar alteração da sua equipe.</p>
+<p>Assim surgiu o conceito de  SCM distribuídos.</p>
+<p>{Imagem versionamento distribuído.}</p>
+<p>O SCM distribuído mais conhecido atualmente é o <a href="https://git-scm.com/">git</a>, mas ele não é o único. Existe também o <a href="https://www.mercurial-scm.org/">Mercurial</a> e o <a href="http://www.bitkeeper.org/">BitKeeper</a>.</p>
+<hr>
+<p>Com o SCM distribuídos cada local que tem o repositório tem um repositório completo de todos os arquivos.
+Na sua máquina tem um repositório completo, na máquina do seu amigo que versionou o código tem um repositório completo, no github tem um repositório completo e no gitlab tem um repositório completo.</p>
+<p>Todo mundo que já fez um trabalho no computador, e precisou ficar salvando um arquivo já precisou de um sistema de controle de versão é não sabia que precisava. Principalmente se fez uma trabalho de conclusão de curso - TCC.
+Começou o trabalho, escreveu várias coisas, salvou e foi dormir.
+No outro dia, continuou escrevendo e alterou coisas que foram escritas no primeiro dia e salvou.
+No terceiro dia, continuou fazendo o trabalho, mas lendo percebeu que o que tinha escrito no primeiro dia estava melhor, mas alterou no segundo e não lembra direito como estava.</p>
+<p>Com isso, começa a salvar o arquivo com nomes diferentes para cada dia ter um arquivo novo, assim começa a criar TCC-versao-01.txt, no outro dia TCC-versao-02.txt e assim vai até chegar no TCC-versao-final.txt, TCC-versao-final02.txt e o TCC-versao-final-de-verdade.txt e parece que nunca acaba.</p>
+<p>O que é um sistema de controle de versão?</p>
+<p>Um sistema de controle de versão (ou versionamento) é uma forma de registrar alterações realizadas em arquivos, de forma que é possível saber quem alterou, quando alterou e o que alterou.
+Com isso é analisar se a versão anterior estava melhor</p>
+<p>&ldquo;Um sistema de controle de versões (ou versionamento), VCS (do inglês version control system) ou ainda SCM (do inglês source code management) na função prática da Ciência da Computação e da Engenharia de Software, é um software que tem a finalidade de gerenciar diferentes versões no desenvolvimento de um documento qualquer. Esses sistemas são comumente utilizados no desenvolvimento de software para controlar as diferentes versões — histórico e desenvolvimento — dos códigos-fontes e também da documentação.&rdquo;</p>
+<p>Vamos começar com uma pergunta básica, git, github e gitlab são as mesmas coisas?</p>
+<p>A resposta é não!!!</p>
+<p>&ldquo;Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.&ldquo;1</p>
+<p>GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando o Git.
+GitLab é um gerenciador de repositório de software baseado em git, com suporte a Wiki, gerenciamento de tarefas e CI/CD.[2]</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Fabio Tavares Pereira Rego 2020
+    
+    
+    ·
+    Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  <script src="https://fabiotavarespr.dev/js/blog.js"></script>
+
+  
+</body>
+</html>

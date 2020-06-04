@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git remote on @fabiotavarespr</title>
+    <link>https://fabiotavarespr.dev/tags/git-remote/</link>
+    <description>Recent content in git remote on @fabiotavarespr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 04 Jun 2020 11:27:07 -0300</lastBuildDate>
+    
+	<atom:link href="https://fabiotavarespr.dev/tags/git-remote/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Alterando o repositório remote com git</title>
+      <link>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</link>
+      <pubDate>Thu, 04 Jun 2020 11:27:07 -0300</pubDate>
+      
+      <guid>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</guid>
+      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.</description>
+    </item>
+    
+  </channel>
+</rss>
