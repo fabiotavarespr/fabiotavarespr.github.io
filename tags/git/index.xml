@@ -20,14 +20,5 @@
       <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.</description>
     </item>
     
-    <item>
-      <title>Introdução a sistema de versionamento - SCM</title>
-      <link>https://fabiotavarespr.dev/posts/introducao-git/</link>
-      <pubDate>Wed, 03 Jun 2020 20:23:05 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/posts/introducao-git/</guid>
-      <description>Vejo situações que desenvolvedores ou pessoas da área de tecnologia começarem a usar algo para resolver um problema ou porque está todo mundo usando, e nem param para entender sobre a origem daquilo.</description>
-    </item>
-    
   </channel>
 </rss>
