@@ -12,6 +12,7 @@
     
     
     <item>
+<<<<<<< HEAD
       <title>10 Rules of Studying</title>
       <link>https://fabiotavarespr.dev/posts/10-regras-bom-mal-estudo-en/</link>
       <pubDate>Fri, 05 Jun 2020 10:36:37 -0300</pubDate>
@@ -30,6 +31,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 8570ea1ea6518833469db48378f5c672f638297d
       <title>Alterando repositório remote no git</title>
       <link>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</link>
       <pubDate>Thu, 04 Jun 2020 11:27:07 -0300</pubDate>
