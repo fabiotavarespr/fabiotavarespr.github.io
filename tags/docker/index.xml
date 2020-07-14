@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on @fabiotavarespr</title>
+    <link>https://fabiotavarespr.dev/tags/docker/</link>
+    <description>Recent content in docker on @fabiotavarespr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 14 Jul 2020 18:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fabiotavarespr.dev/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como configurar um DNS Bind9 com docker</title>
+      <link>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</link>
+      <pubDate>Tue, 14 Jul 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</guid>
+      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.</description>
+    </item>
+    
+  </channel>
+</rss>
