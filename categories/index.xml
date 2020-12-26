@@ -5,10 +5,6 @@
     <link>https://fabiotavarespr.dev/categories/</link>
     <description>Recent content in Categories on @fabiotavarespr</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-BR</language>
-    
-	<atom:link href="https://fabiotavarespr.dev/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>pt-BR</language><atom:link href="https://fabiotavarespr.dev/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

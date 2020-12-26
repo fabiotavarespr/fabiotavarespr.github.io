@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.71.1" />
+  <meta name="generator" content="Hugo 0.79.1" />
 
   <title>Como configurar um DNS Bind9 com docker &middot; @fabiotavarespr</title>
 
@@ -13,13 +13,14 @@
 
 <meta itemprop="name" content="Como configurar um DNS Bind9 com docker">
 <meta itemprop="description" content="Como configurar um DNS BIND9 utilizando uma imagem docker - Primário e Secundário">
-<meta itemprop="datePublished" content="2020-07-14T18:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-07-14T18:00:00&#43;00:00" />
+<meta itemprop="datePublished" content="2020-07-14T18:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-07-14T18:00:00+00:00" />
 <meta itemprop="wordCount" content="1074">
 
 
 
 <meta itemprop="keywords" content="dns,bind9,docker," />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Como configurar um DNS Bind9 com docker"/>
@@ -180,24 +181,24 @@
 <table>
 <thead>
 <tr>
-<th align="center">Host</th>
-<th align="left">Função</th>
-<th align="left">FQDN privado</th>
-<th align="center">Endereço IP privado</th>
+<th style="text-align:center">Host</th>
+<th style="text-align:left">Função</th>
+<th style="text-align:left">FQDN privado</th>
+<th style="text-align:center">Endereço IP privado</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">ns1</td>
-<td align="left">Servidor DNS primário</td>
-<td align="left">ns1.novodominio.com</td>
-<td align="center">10.0.10.1</td>
+<td style="text-align:center">ns1</td>
+<td style="text-align:left">Servidor DNS primário</td>
+<td style="text-align:left">ns1.novodominio.com</td>
+<td style="text-align:center">10.0.10.1</td>
 </tr>
 <tr>
-<td align="center">ns2</td>
-<td align="left">Servidor DNS secundário</td>
-<td align="left">ns2.novodominio.com</td>
-<td align="center">10.0.10.2</td>
+<td style="text-align:center">ns2</td>
+<td style="text-align:left">Servidor DNS secundário</td>
+<td style="text-align:left">ns2.novodominio.com</td>
+<td style="text-align:center">10.0.10.2</td>
 </tr>
 </tbody>
 </table>
@@ -221,8 +222,8 @@ Começaremos editando o docker-compose.yml</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /opt/bind9/docker-compose.yml
 </code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/primary</strong>, ficando da seguinte forma.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-    <span style="color:#66d9ef">volumes</span>:
-    - /opt/bind9/primary:/data <span style="color:#75715e"># Change volume path</span>
+    <span style="color:#f92672">volumes</span>:
+    - <span style="color:#ae81ff">/opt/bind9/primary:/data</span> <span style="color:#75715e"># Change volume path</span>
 </code></pre></div><p>A próxima configuração será criar a zona desejada no DNS, no exemplo do <a href="https://github.com/labbsr0x/docker-dns-bind9">labbsr0x/docker-dns-bind9</a> a zona está configurada como <strong>example.com</strong>, vamos alterar a zona para <strong>novodominio.com</strong>.</p>
 <p>Para realizar essa alteração, vamos renomear o arquivo <strong>db.example.com</strong> para <strong>db.novodominio.com</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv /opt/bind9/primary/bind/etc/db.example.com /opt/bind9/primary/bind/etc/db.novodominio.com
@@ -231,37 +232,37 @@ Começaremos editando o docker-compose.yml</p>
 </code></pre></div><p>No arquivo de configuração, vamos alterar em todos os lugares que estão <strong>db.example.com</strong> para <strong>db.novodominio.com</strong>, e na relação de domínios, vamos alterar os IPs do <strong>ns1</strong>, <strong>ns2</strong>.</p>
 <p>Criaremos também uma entrada no DNS para simular um direcionamento para o host1.</p>
 <p>O arquivo ficará da seguinte forma.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">;
-; BIND data file for local loopback interface
-;
-$TTL    <span style="color:#ae81ff">604800</span>
-@       IN      SOA     novodominio.com. root.novodominio.com. (
-                              <span style="color:#ae81ff">1</span>         ; Serial
-                         <span style="color:#ae81ff">604800</span>         ; Refresh
-                          <span style="color:#ae81ff">86400</span>         ; Retry
-                        <span style="color:#ae81ff">2419200</span>         ; Expire
-                         <span style="color:#ae81ff">604800</span> )       ; Negative Cache TTL
-;
-@       IN      NS      ns1.novodominio.com.
-@       IN      NS      ns2.novodominio.com.
-@       IN      A       <span style="color:#ae81ff">127.0.0.1</span>
-@       IN      AAAA    ::<span style="color:#ae81ff">1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#ae81ff">;</span>
+<span style="color:#ae81ff">; BIND data file for local loopback interface</span>
+<span style="color:#ae81ff">;</span>
+<span style="color:#ae81ff">$TTL    604800</span>
+@       <span style="color:#ae81ff">IN      SOA     novodominio.com. root.novodominio.com. (</span>
+                              <span style="color:#ae81ff">1</span>         <span style="color:#ae81ff">; Serial</span>
+                         <span style="color:#ae81ff">604800</span>         <span style="color:#ae81ff">; Refresh</span>
+                          <span style="color:#ae81ff">86400</span>         <span style="color:#ae81ff">; Retry</span>
+                        <span style="color:#ae81ff">2419200</span>         <span style="color:#ae81ff">; Expire</span>
+                         <span style="color:#ae81ff">604800</span> <span style="color:#ae81ff">)       ; Negative Cache TTL</span>
+<span style="color:#ae81ff">;</span>
+@       <span style="color:#ae81ff">IN      NS      ns1.novodominio.com.</span>
+@       <span style="color:#ae81ff">IN      NS      ns2.novodominio.com.</span>
+@       <span style="color:#ae81ff">IN      A       127.0.0.1</span>
+@       <span style="color:#ae81ff">IN      AAAA    ::1</span>
 
-ns1             A       <span style="color:#ae81ff">10.0.10.1</span>   ; Change to the desired NS1 IP
-ns2             A       <span style="color:#ae81ff">10.0.10.2</span>   ; Change to the desired NS2 IP
+<span style="color:#ae81ff">ns1             A       10.0.10.1   ; Change to the desired NS1 IP</span>
+<span style="color:#ae81ff">ns2             A       10.0.10.2   ; Change to the desired NS2 IP</span>
 </code></pre></div><p>Com o nosso arquivo de zona criado, vamos adicionar ele no <strong>named.conf.default-zones</strong> e realizar as configurações necessários.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /opt/bind9/primary/bind/etc/named.conf.default-zones
 </code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o <strong>IP do NS2 no allow-transfer</strong>, com isso o DNS Secundário receberá as informações do DNS Primário.</p>
 <p>O resultado da alteração será a seguinte.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-zone <span style="color:#e6db74">&#34;novodominio.com&#34;</span> { // Change to desired zone
-        type master;
-        file <span style="color:#e6db74">&#34;/etc/bind/db.novodominio.com&#34;</span>; // Change to zone file path
-        allow-transfer {<span style="color:#ae81ff">10.0.10.2</span>; };        // Change to Secondary DNS IP
-//      allow-update {
-//          key <span style="color:#e6db74">&#34;example.com&#34;</span>;
-//  };
-};
+<span style="color:#ae81ff">zone &#34;novodominio.com&#34; { // Change to desired zone</span>
+        <span style="color:#ae81ff">type master;</span>
+        <span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;; // Change to zone file path</span>
+        <span style="color:#ae81ff">allow-transfer {10.0.10.2; };        // Change to Secondary DNS IP</span>
+<span style="color:#ae81ff">//      allow-update {</span>
+<span style="color:#ae81ff">//          key &#34;example.com&#34;;</span>
+<span style="color:#ae81ff">//  };</span>
+}<span style="color:#ae81ff">;</span>
 ...
 </code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso novo DNS.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /opt/bind9/
@@ -287,19 +288,19 @@ Começaremos editando o docker-compose.yml</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /opt/bind9/docker-compose.yml
 </code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/secondary</strong>, ficando da seguinte forma.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-    <span style="color:#66d9ef">volumes</span>:
-    - /opt/bind9/secondary:/data <span style="color:#75715e"># Change volume path </span>
+    <span style="color:#f92672">volumes</span>:
+    - <span style="color:#ae81ff">/opt/bind9/secondary:/data</span> <span style="color:#75715e"># Change volume path </span>
 </code></pre></div><p>No caso do DNS Secundário, ele replica as entradas do DNS Primário, com isso não é necessário criar o arquivo db.novodominio.com.
 Sendo necessário só alterar o arquivo <strong>named.conf.default-zones</strong> e realizar as configurações necessárias.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /opt/bind9/secondary/bind/etc/named.conf.default-zones
 </code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o IP do NS1 na campo master, com isso o DNS Secundário sabe qual é o DNS Primário.</p>
 <p>O resultado da alteração será a seguinte.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-zone <span style="color:#e6db74">&#34;novodominio.com&#34;</span> {  // Change to desired zone
-	type slave;
-	file <span style="color:#e6db74">&#34;/etc/bind/db.novodominio.com&#34;</span>;	// Change to zone file path
-	masters {<span style="color:#ae81ff">10.0.10.1</span>;};				          // Change to Primary DNS IP
-};
+<span style="color:#ae81ff">zone &#34;novodominio.com&#34; {  // Change to desired zone</span>
+	<span style="color:#ae81ff">type slave;</span>
+	<span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;;	// Change to zone file path</span>
+	<span style="color:#ae81ff">masters {10.0.10.1;};				          // Change to Primary DNS IP</span>
+}<span style="color:#ae81ff">;</span>
 ...
 </code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso DNS Secundário.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /opt/bind9/

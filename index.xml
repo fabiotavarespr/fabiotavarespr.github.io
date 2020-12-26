@@ -6,11 +6,7 @@
     <description>Recent content on @fabiotavarespr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 14 Jul 2020 18:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://fabiotavarespr.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 14 Jul 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como configurar um DNS Bind9 com docker</title>
       <link>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</link>
@@ -62,7 +58,7 @@
       <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/about/</guid>
-      <description>Tenho mais de 16 anos de experiência profissional na área de TI.</description>
+      <description>Tenho mais de 17 anos de experiência profissional na área de TI.</description>
     </item>
     
   </channel>
