@@ -13,7 +13,8 @@
       <pubDate>Tue, 14 Jul 2020 18:00:00 +0000</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</guid>
-      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.</description>
+      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.
+A imagem que utilizaremos neste Post é a do projeto labbsr0x/docker-dns-bind9, imagem implementada pela equipe do Labbs do Banco do Brasil.</description>
     </item>
     
   </channel>

@@ -13,7 +13,9 @@
       <pubDate>Thu, 04 Jun 2020 11:27:07 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</guid>
-      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.</description>
+      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.
+Com isso é possível alterar o repositório remoto do gitlab para o github ou vice-versa, sem perder o histórico de alteração, como os commits, quem alterou e o que alterou, resumindo, toda a rastreabilidade das alterações versionadas.
+Como fazemos isso? Para exemplificar, vamos utilizar o repositório criado para esse post no github e levar para o gitlab. O repositório é alterando-repositorio.</description>
     </item>
     
   </channel>

@@ -13,7 +13,8 @@
       <pubDate>Tue, 14 Jul 2020 18:00:00 +0000</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</guid>
-      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.</description>
+      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.
+A imagem que utilizaremos neste Post é a do projeto labbsr0x/docker-dns-bind9, imagem implementada pela equipe do Labbs do Banco do Brasil.</description>
     </item>
     
     <item>
@@ -22,7 +23,9 @@
       <pubDate>Thu, 04 Jun 2020 11:27:07 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</guid>
-      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.</description>
+      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.
+Com isso é possível alterar o repositório remoto do gitlab para o github ou vice-versa, sem perder o histórico de alteração, como os commits, quem alterou e o que alterou, resumindo, toda a rastreabilidade das alterações versionadas.
+Como fazemos isso? Para exemplificar, vamos utilizar o repositório criado para esse post no github e levar para o gitlab. O repositório é alterando-repositorio.</description>
     </item>
     
     <item>
@@ -31,7 +34,9 @@
       <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/o-primeiro-passo/</guid>
-      <description>Para quem não me conhece, o meu nome é Fabio. Seja bem-vindo a esse humilde blog.</description>
+      <description>Para quem não me conhece, o meu nome é Fabio. Seja bem-vindo a esse humilde blog.
+Durante a minha vida profissional, trabalhei com tecnologia. Alguns anos como desenvolvedor/programador, outros como analista de aplicação, porém, atualmente, com a cultura DevOps em alta, essas duas áreas se misturaram e tem hora que nem sei como intitular o que faço. Como o nome DevOps está em alta, vamos usá-lo.
+Uma coisa tenho certeza, trabalhar com tecnologia não é fácil.</description>
     </item>
     
     <item>
@@ -40,7 +45,8 @@
       <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/about/</guid>
-      <description>Tenho mais de 17 anos de experiência profissional na área de TI.</description>
+      <description>Tenho experiência profissional trabalhando na área de TI desde 2005. Atualmente, trabalho como Engenheiro de Software na Pismo, a minha função é projetar fluxos e desenvolver/testar/entregar novos recursos para o setor bancário (carteiras digitais, entradas de contas) em um ambiente de alta disponibilidade e grande volume de dados.
+Trabalhei como Programador Java Full Stack e Analista de Aplicação no desenvolvimento e manutenção de sistemas e infraestrutura em várias agências governamentais brasileiras.</description>
     </item>
     
   </channel>
