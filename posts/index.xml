@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on @fabiotavarespr</title>
+    <title>Posts on Blog</title>
     <link>https://fabiotavarespr.dev/posts/</link>
-    <description>Recent content in Posts on @fabiotavarespr</description>
+    <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
     <lastBuildDate>Tue, 14 Jul 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -14,24 +14,6 @@
       
       <guid>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</guid>
       <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.</description>
-    </item>
-    
-    <item>
-      <title>10 Rules of Studying</title>
-      <link>https://fabiotavarespr.dev/posts/10-regras-bom-mal-estudo-en/</link>
-      <pubDate>Fri, 05 Jun 2020 10:36:37 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/posts/10-regras-bom-mal-estudo-en/</guid>
-      <description>10 Rules of Studying These rules form a synthesis of some of the main ideas of the course&amp;ndash;they are excerpted from the book A Mind for Numbers: How to Excel in Math and Science (Even if You Flunked Algebra), by Barbara Oakley, Penguin, July, 2014.</description>
-    </item>
-    
-    <item>
-      <title>10 Regras de bom e mau estudo</title>
-      <link>https://fabiotavarespr.dev/posts/10-regras-bom-mal-estudo/</link>
-      <pubDate>Fri, 05 Jun 2020 10:32:06 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/posts/10-regras-bom-mal-estudo/</guid>
-      <description>10 Regras para Estudar Bem By Barbara Oakley, PhD, PE, translated by Manuel Paquete</description>
     </item>
     
     <item>
@@ -49,7 +31,7 @@
       <pubDate>Fri, 29 May 2020 20:07:38 -0300</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/o-primeiro-passo/</guid>
-      <description>Para quem não me conhece, meu nome é Fabio. Seja bem-vindo a esse humilde blog.</description>
+      <description>Para quem não me conhece, o meu nome é Fabio. Seja bem-vindo a esse humilde blog.</description>
     </item>
     
   </channel>
