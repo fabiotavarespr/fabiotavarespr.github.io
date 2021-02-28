@@ -1,73 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://fabiotavarespr.dev/tags/bind9/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/tags/dns/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/tags/docker/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/posts/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/tags/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</loc>
     <lastmod>2020-06-04T11:27:07-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/tags/git/</loc>
     <lastmod>2020-06-04T11:27:07-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/tags/versionamento/</loc>
     <lastmod>2020-06-04T11:27:07-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/posts/o-primeiro-passo/</loc>
     <lastmod>2020-05-29T20:07:38-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/about/</loc>
     <lastmod>2020-05-29T20:07:38-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabiotavarespr.dev/series/</loc>
   </url>
-  
 </urlset>
