@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on @fabiotavarespr</title>
+    <title>Tags on Blog</title>
     <link>https://fabiotavarespr.dev/tags/</link>
-    <description>Recent content in Tags on @fabiotavarespr</description>
+    <description>Recent content in Tags on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
     <lastBuildDate>Tue, 14 Jul 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -31,24 +31,6 @@
       <pubDate>Tue, 14 Jul 2020 18:00:00 +0000</pubDate>
       
       <guid>https://fabiotavarespr.dev/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aprendizado</title>
-      <link>https://fabiotavarespr.dev/tags/aprendizado/</link>
-      <pubDate>Fri, 05 Jun 2020 10:36:37 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/tags/aprendizado/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>learning</title>
-      <link>https://fabiotavarespr.dev/tags/learning/</link>
-      <pubDate>Fri, 05 Jun 2020 10:36:37 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/tags/learning/</guid>
       <description></description>
     </item>
     
