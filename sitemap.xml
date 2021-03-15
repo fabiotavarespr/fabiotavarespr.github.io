@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fabiotavarespr.dev/tags/bind9/</loc>
-    <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://fabiotavarespr.dev/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/cheatsheet/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/docker/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/posts/docker-cheat-sheet/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/posts/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/</loc>
+    <lastmod>2021-03-15T12:14:01+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/bind9/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/tags/dns/</loc>
-    <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/tags/docker/</loc>
-    <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/posts/</loc>
-    <lastmod>2020-07-14T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/tags/</loc>
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</loc>
