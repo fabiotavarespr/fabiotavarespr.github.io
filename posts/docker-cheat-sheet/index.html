@@ -4,7 +4,7 @@
     <title>Docker Cheat Sheet // Blog</title>
     <link rel="shortcut icon" href="http://fabiotavarespr.dev/favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.93.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="@fabiotavarespr" />
     <meta name="description" content="Lista de comandos docker" />
@@ -109,41 +109,41 @@
 <p>Cheat Sheet com comandos docker úteis.</p>
 <p>Sempre que encontrar novos comandos necessários irei adicionando.</p>
 <h3 id="lista-todas-as-imagens-docker">Lista todas as imagens docker</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker images -a
-</code></pre></div><h3 id="lista-todos-os-containers-rodando">Lista todos os containers rodando</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps
-</code></pre></div><h3 id="lista-todos-os-containers">Lista todos os containers</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps -a
-</code></pre></div><h3 id="inicia-container">Inicia container</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run &lt;nome_da_imagem&gt;
-</code></pre></div><h3 id="inicia-container-e-remove-ele-quando-parar">Inicia container e remove ele quando parar</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run --rm &lt;nome_da_imagem&gt;
-</code></pre></div><h3 id="inicia-container-usando-a-rede-do-host-e-remove-ele-quando-parar">Inicia container usando a rede do host e remove ele quando parar</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run --rm --network host &lt;nome_da_imagem&gt;
-</code></pre></div><h3 id="inicia-container-existente">Inicia container existente</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker start &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
-</code></pre></div><h3 id="para-container">Para container</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker stop &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
-</code></pre></div><h3 id="mata-todos-os-container">Mata todos os container</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker kill <span style="color:#66d9ef">$(</span>docker ps -q<span style="color:#66d9ef">)</span>
-</code></pre></div><h3 id="visualiza-log-do-container">Visualiza log do container</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker logs &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
-</code></pre></div><h3 id="visualiza-log-do-container-em-tempo-real">Visualiza log do container em tempo real</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker logs -f &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
-</code></pre></div><h3 id="deleta-todos-os-container">Deleta todos os container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker images -a
+</span></span></code></pre></div><h3 id="lista-todos-os-containers-rodando">Lista todos os containers rodando</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><h3 id="lista-todos-os-containers">Lista todos os containers</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker ps -a
+</span></span></code></pre></div><h3 id="inicia-container">Inicia container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run &lt;nome_da_imagem&gt;
+</span></span></code></pre></div><h3 id="inicia-container-e-remove-ele-quando-parar">Inicia container e remove ele quando parar</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run --rm &lt;nome_da_imagem&gt;
+</span></span></code></pre></div><h3 id="inicia-container-usando-a-rede-do-host-e-remove-ele-quando-parar">Inicia container usando a rede do host e remove ele quando parar</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run --rm --network host &lt;nome_da_imagem&gt;
+</span></span></code></pre></div><h3 id="inicia-container-existente">Inicia container existente</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker start &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
+</span></span></code></pre></div><h3 id="para-container">Para container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker stop &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
+</span></span></code></pre></div><h3 id="mata-todos-os-container">Mata todos os container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker kill <span style="color:#66d9ef">$(</span>docker ps -q<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="visualiza-log-do-container">Visualiza log do container</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker logs &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
+</span></span></code></pre></div><h3 id="visualiza-log-do-container-em-tempo-real">Visualiza log do container em tempo real</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker logs -f &lt;nome_do_container&gt; ou &lt;id_do_container&gt;
+</span></span></code></pre></div><h3 id="deleta-todos-os-container">Deleta todos os container</h3>
 <p>Use forçar -f para deletar docker rodando.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker rm <span style="color:#66d9ef">$(</span>docker ps -a -q<span style="color:#66d9ef">)</span>
-</code></pre></div><h3 id="deleta-imagem">Deleta imagem</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker rmi &lt;nome_da_imagem&gt;
-</code></pre></div><h3 id="deleta-todas-as-imagens">Deleta todas as imagens</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker rmi <span style="color:#66d9ef">$(</span>docker images -q<span style="color:#66d9ef">)</span>
-</code></pre></div><h3 id="deleta-todas-as-imagens-sem-pendências">Deleta todas as imagens sem pendências</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker rmi <span style="color:#66d9ef">$(</span>docker images -q -f dangling<span style="color:#f92672">=</span>true<span style="color:#66d9ef">)</span>
-</code></pre></div><h3 id="deleta-volumes-sem-pendências">Deleta volumes sem pendências</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker volume rm -f <span style="color:#66d9ef">$(</span>docker volume ls -f dangling<span style="color:#f92672">=</span>true -q<span style="color:#66d9ef">)</span>
-</code></pre></div><h3 id="entra-no-container-via-ssh-local">Entra no container via ssh local</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker exec -it &lt;nome_do_container&gt; bash
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rm <span style="color:#66d9ef">$(</span>docker ps -a -q<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="deleta-imagem">Deleta imagem</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rmi &lt;nome_da_imagem&gt;
+</span></span></code></pre></div><h3 id="deleta-todas-as-imagens">Deleta todas as imagens</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rmi <span style="color:#66d9ef">$(</span>docker images -q<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="deleta-todas-as-imagens-sem-pendências">Deleta todas as imagens sem pendências</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rmi <span style="color:#66d9ef">$(</span>docker images -q -f dangling<span style="color:#f92672">=</span>true<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="deleta-volumes-sem-pendências">Deleta volumes sem pendências</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker volume rm -f <span style="color:#66d9ef">$(</span>docker volume ls -f dangling<span style="color:#f92672">=</span>true -q<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="entra-no-container-via-ssh-local">Entra no container via ssh local</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo docker exec -it &lt;nome_do_container&gt; bash
+</span></span></code></pre></div>
     </div>
     <div class="post-footer">
       
