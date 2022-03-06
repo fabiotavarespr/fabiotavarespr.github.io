@@ -36,6 +36,9 @@
           <a class="app-header-menu-item" href="/posts/">Posts</a>
             <br/>
           
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+            <br/>
+          
           <a class="app-header-menu-item" href="/about/">Sobre</a>
             <br/>
           
@@ -108,12 +111,13 @@
     <div class="post-content">
       <h1 id="mysql-alter-table-alter-vs-change-vs-modify-column">MySQL ALTER TABLE: ALTER vs CHANGE vs MODIFY COLUMN</h1>
 <p>Sempre que eu tenho que realizar uma alteração de coluna no MySQL (atividade que não é tão frequente), eu acabou esquecendo a diferença entre ALTER COLUMN, CHANGE COLUMN e MODIFY COLUMN.</p>
+<p>Aqui vai uma referencia para ajudar.</p>
 <h3 id="alter-column">ALTER COLUMN</h3>
 <p>Usado para definir ou remover o valor padrão de uma coluna.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> nomeTabela <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">COLUMN</span> foo <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;bar&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> nomeTabela <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">COLUMN</span> foo <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DEFAULT</span>;
-</span></span></code></pre></div><p>###CHANGE COLUMN
-Usado para renomear uma coluna, alterar seu tipo de dados.</p>
+</span></span></code></pre></div><h3 id="change-column">CHANGE COLUMN</h3>
+<p>Usado para renomear uma coluna, alterar seu tipo de dados.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> nomeTabela CHANGE <span style="color:#66d9ef">COLUMN</span> foo foo VARCHAR(<span style="color:#ae81ff">32</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> nomeTabela CHANGE <span style="color:#66d9ef">COLUMN</span> foo bar VARCHAR(<span style="color:#ae81ff">32</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">FIRST</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> nomeTabela CHANGE <span style="color:#66d9ef">COLUMN</span> foo bar VARCHAR(<span style="color:#ae81ff">32</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AFTER</span> baz;
