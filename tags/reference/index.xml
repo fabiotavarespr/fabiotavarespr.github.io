@@ -13,8 +13,8 @@
       <pubDate>Fri, 04 Mar 2022 18:00:00 +0000</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/diferenca-entre-alter-table-mysql/</guid>
-      <description>MySQL ALTER TABLE: ALTER vs CHANGE vs MODIFY COLUMN Sempre que eu tenho que realizar uma alteração de coluna no MySQL (atividade que não é tão frequente), eu acabou esquecendo a diferença entre ALTER COLUMN, CHANGE COLUMN e MODIFY COLUMN.
-Aqui vai uma referencia para ajudar.
+      <description>MySQL ALTER TABLE: ALTER vs CHANGE vs MODIFY COLUMN Sempre que tenho que realizar uma alteração de coluna no MySQL (atividade que não é tão frequente), eu acabou esquecendo a diferença entre ALTER COLUMN, CHANGE COLUMN e MODIFY COLUMN.
+Aqui vai uma referência para ajudar a relembrar.
 ALTER COLUMN Usado para definir ou remover o valor padrão de uma coluna.
 ALTER TABLE nomeTabela ALTER COLUMN foo SET DEFAULT &amp;#39;bar&amp;#39;; ALTER TABLE nomeTabela ALTER COLUMN foo DROP DEFAULT; CHANGE COLUMN Usado para renomear uma coluna, alterar seu tipo de dados.</description>
     </item>
