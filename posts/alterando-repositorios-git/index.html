@@ -4,7 +4,7 @@
     <title>Alterando repositório remote no git // Blog</title>
     <link rel="shortcut icon" href="http://fabiotavarespr.dev/favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="@fabiotavarespr" />
     <meta name="description" content="Como levar seu código do gitlab para o github (ou vice-versa) sem perder seu histórico?" />
@@ -104,44 +104,44 @@
 <p>Com o projeto versionado no github e já sincronizado.</p>
 <p><img src="https://fabiotavarespr.dev/images/commits-github.png" alt="Relação de commits no repositório remoto do github"></p>
 <p>No diretório do projeto vamos listar os repositórios remotos com o seguinte comando</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote -v
-</code></pre></div><p>Como retorno, temos os repositórios remotos existentes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">origin  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
-origin  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="origin">Origin</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote -v
+</span></span></code></pre></div><p>Como retorno, temos os repositórios remotos existentes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>origin  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>origin  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="origin">Origin</h2>
 <p>O nome do repositório padrão é <em>origin</em>, esse nome é definido  no  copia e cola que o github ou gitlab apresenta quando criamos nossos projetos e faz o primeiro commit, mas as pessoas nem param para pensar, então depois executam <em>git push</em> e <em>git pull</em> e vão trabalhando automaticamente.</p>
 <p>Para visualizar melhor, vamos mudar esse nome para github.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote rename origin github
-</code></pre></div><p>Listando os repositórios novamente, e veremos o resultado da alteração</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote -v  
-
-github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
-github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="adicionando-o-repositório-remoto-do-gitlab-e-sincronizando-os-repositórios">Adicionando o repositório remoto do gitlab e sincronizando os repositórios.</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote rename origin github
+</span></span></code></pre></div><p>Listando os repositórios novamente, e veremos o resultado da alteração</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote -v  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="adicionando-o-repositório-remoto-do-gitlab-e-sincronizando-os-repositórios">Adicionando o repositório remoto do gitlab e sincronizando os repositórios.</h2>
 <p>Para adicionar o repositório remoto do gitlab no nosso repositório local vamos executar o seguinte comando.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote add gitlab https://gitlab.com/fabiotavarespr/alterando-repositorio.git
-</code></pre></div><p>Com isso adicionamos o repositório remoto do gitlab, nomeamos ele como gitlab, ficando da seguinte forma a listagem dos repositórios.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote -v 
-
-github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
-github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
-gitlab  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
-gitlab  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
-</code></pre></div><p>Próximo passo agora, é sincronizar o repositório local com o repositório remoto, para isso vamos executar</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git push -u gitlab --all
-$ git push -u gitlab --tags
-</code></pre></div><p>Conferindo os commits no gitlab, análise que eles ficam com o mesmo hash que no github, mantendo toda a rastreabilidade do código nos dois repositórios remotos, como prometido</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote add gitlab https://gitlab.com/fabiotavarespr/alterando-repositorio.git
+</span></span></code></pre></div><p>Com isso adicionamos o repositório remoto do gitlab, nomeamos ele como gitlab, ficando da seguinte forma a listagem dos repositórios.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote -v 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>github  https://github.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>gitlab  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>gitlab  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Próximo passo agora, é sincronizar o repositório local com o repositório remoto, para isso vamos executar</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git push -u gitlab --all
+</span></span><span style="display:flex;"><span>$ git push -u gitlab --tags
+</span></span></code></pre></div><p>Conferindo os commits no gitlab, análise que eles ficam com o mesmo hash que no github, mantendo toda a rastreabilidade do código nos dois repositórios remotos, como prometido</p>
 <p><img src="https://fabiotavarespr.dev/images/commits-gitlab.png" alt="Relação de commits no repositório remoto do gitlab"></p>
 <p>Para remover qualquer um dos repositórios remotos basta executar <em>git remote remove $NOME_REPOSITORIO</em>, como exemplo.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote remove github
-</code></pre></div><p>Para renomear um dos repositórios remotos basta executar <em>git remote remove $NOME_REPOSITORIO</em>, como exemplo.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote rename gitlab origin
-</code></pre></div><p>Ficando no final assim, somente o repositório remoto do gitlab, com o nome origin.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git remote -v
-
-origin  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
-origin  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="referências">Referências</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote remove github
+</span></span></code></pre></div><p>Para renomear um dos repositórios remotos basta executar <em>git remote remove $NOME_REPOSITORIO</em>, como exemplo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote rename gitlab origin
+</span></span></code></pre></div><p>Ficando no final assim, somente o repositório remoto do gitlab, com o nome origin.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git remote -v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>origin  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>fetch<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>origin  https://gitlab.com/fabiotavarespr/alterando-repositorio.git <span style="color:#f92672">(</span>push<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="referências">Referências</h2>
 <ul>
 <li><a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes">https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes</a></li>
 <li><a href="https://about.gitlab.com">https://about.gitlab.com</a></li>

@@ -4,7 +4,7 @@
     <title>Como configurar um DNS Bind9 com docker // Blog</title>
     <link rel="shortcut icon" href="http://fabiotavarespr.dev/favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.101.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="@fabiotavarespr" />
     <meta name="description" content="Como configurar um DNS BIND9 utilizando uma imagem docker - Primário e Secundário" />
@@ -19,8 +19,8 @@
 <meta property="og:description" content="Como configurar um DNS BIND9 utilizando uma imagem docker - Primário e Secundário" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-07-14T18:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-07-14T18:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-07-14T18:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-14T18:00:00+00:00" />
 
 
 
@@ -165,118 +165,118 @@
 </table>
 <h2 id="configurar-o-servidor-dns-primário">Configurar o servidor DNS primário</h2>
 <p>Para configurar o Servidor DNS Primário, vamos utilizar a estrutura de exemplo disponível no projeto <a href="https://github.com/labbsr0x/docker-dns-bind9">labbsr0x/docker-dns-bind9</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Nota: Caso não seja do seu interesse utilizar a estrutura de exemplo, basta iniciar o container em um volume vazio, 
-com isso o container iniciará uma estrutura do Bind9 nova, fique a vontade para fazer a configuração que melhor atenda 
-sua realidade.
-</code></pre></div><p>Dentro da máquina <strong>ns1 (IP 10.0.10.1)</strong>, vamos realizar as seguintes ações</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Nota: Caso não seja do seu interesse utilizar a estrutura de exemplo, basta iniciar o container em um volume vazio, 
+</span></span><span style="display:flex;"><span>com isso o container iniciará uma estrutura do Bind9 nova, fique a vontade para fazer a configuração que melhor atenda 
+</span></span><span style="display:flex;"><span>sua realidade.
+</span></span></code></pre></div><p>Dentro da máquina <strong>ns1 (IP 10.0.10.1)</strong>, vamos realizar as seguintes ações</p>
 <p>Para padronizar a instalação, vamos usar com base o diretório /opt</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd /opt
-</code></pre></div><p>Vamos realizar o clone do projeto no github, usaremos a estrutura de exemplo do projeto para ajudar na configuração.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/labbsr0x/docker-dns-bind9.git
-</code></pre></div><p>Criaremos um diretório que será utilizado como volume do DNS</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mkdir /opt/bind9
-</code></pre></div><p>Vamos copiar a estrutura de diretório do DNS primário para o diretório que usaremos como volume do container e copiar também o arquivo de docker-compose</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cp -r /opt/docker-dns-bind9/example/primary /opt/bind9/.
-
-$ cp /opt/docker-dns-bind9/docker-compose.yml /opt/bind9/.
-</code></pre></div><h3 id="alterações-nas-configurações">Alterações nas configurações</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd /opt
+</span></span></code></pre></div><p>Vamos realizar o clone do projeto no github, usaremos a estrutura de exemplo do projeto para ajudar na configuração.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git clone https://github.com/labbsr0x/docker-dns-bind9.git
+</span></span></code></pre></div><p>Criaremos um diretório que será utilizado como volume do DNS</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mkdir /opt/bind9
+</span></span></code></pre></div><p>Vamos copiar a estrutura de diretório do DNS primário para o diretório que usaremos como volume do container e copiar também o arquivo de docker-compose</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cp -r /opt/docker-dns-bind9/example/primary /opt/bind9/.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cp /opt/docker-dns-bind9/docker-compose.yml /opt/bind9/.
+</span></span></code></pre></div><h3 id="alterações-nas-configurações">Alterações nas configurações</h3>
 <p>Agora vamos alterar as configurações necessárias para configurar o Bind9.
 Começaremos editando o docker-compose.yml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vi /opt/bind9/docker-compose.yml
-</code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/primary</strong>, ficando da seguinte forma.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-    <span style="color:#f92672">volumes</span>:
-    - <span style="color:#ae81ff">/opt/bind9/primary:/data</span> <span style="color:#75715e"># Change volume path</span>
-</code></pre></div><p>A próxima configuração será criar a zona desejada no DNS, no exemplo do <a href="https://github.com/labbsr0x/docker-dns-bind9">labbsr0x/docker-dns-bind9</a> a zona está configurada como <strong>example.com</strong>, vamos alterar a zona para <strong>novodominio.com</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ vi /opt/bind9/docker-compose.yml
+</span></span></code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/primary</strong>, ficando da seguinte forma.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">/opt/bind9/primary:/data</span> <span style="color:#75715e"># Change volume path</span>
+</span></span></code></pre></div><p>A próxima configuração será criar a zona desejada no DNS, no exemplo do <a href="https://github.com/labbsr0x/docker-dns-bind9">labbsr0x/docker-dns-bind9</a> a zona está configurada como <strong>example.com</strong>, vamos alterar a zona para <strong>novodominio.com</strong>.</p>
 <p>Para realizar essa alteração, vamos renomear o arquivo <strong>db.example.com</strong> para <strong>db.novodominio.com</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mv /opt/bind9/primary/bind/etc/db.example.com /opt/bind9/primary/bind/etc/db.novodominio.com
-</code></pre></div><p>Agora vamos realizar as alterações necessárias no arquivo de configuração da zona (<strong>db.novodominio.com</strong>) para ficar como proposto no objetivos.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vi /opt/bind9/primary/bind/etc/db.novodominio.com
-</code></pre></div><p>No arquivo de configuração, vamos alterar em todos os lugares que estão <strong>db.example.com</strong> para <strong>db.novodominio.com</strong>, e na relação de domínios, vamos alterar os IPs do <strong>ns1</strong>, <strong>ns2</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mv /opt/bind9/primary/bind/etc/db.example.com /opt/bind9/primary/bind/etc/db.novodominio.com
+</span></span></code></pre></div><p>Agora vamos realizar as alterações necessárias no arquivo de configuração da zona (<strong>db.novodominio.com</strong>) para ficar como proposto no objetivos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ vi /opt/bind9/primary/bind/etc/db.novodominio.com
+</span></span></code></pre></div><p>No arquivo de configuração, vamos alterar em todos os lugares que estão <strong>db.example.com</strong> para <strong>db.novodominio.com</strong>, e na relação de domínios, vamos alterar os IPs do <strong>ns1</strong>, <strong>ns2</strong>.</p>
 <p>Criaremos também uma entrada no DNS para simular um direcionamento para o host1.</p>
 <p>O arquivo ficará da seguinte forma.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#ae81ff">;</span>
-<span style="color:#ae81ff">; BIND data file for local loopback interface</span>
-<span style="color:#ae81ff">;</span>
-<span style="color:#ae81ff">$TTL    604800</span>
-@       <span style="color:#ae81ff">IN      SOA     novodominio.com. root.novodominio.com. (</span>
-                              <span style="color:#ae81ff">1</span>         <span style="color:#ae81ff">; Serial</span>
-                         <span style="color:#ae81ff">604800</span>         <span style="color:#ae81ff">; Refresh</span>
-                          <span style="color:#ae81ff">86400</span>         <span style="color:#ae81ff">; Retry</span>
-                        <span style="color:#ae81ff">2419200</span>         <span style="color:#ae81ff">; Expire</span>
-                         <span style="color:#ae81ff">604800</span> <span style="color:#ae81ff">)       ; Negative Cache TTL</span>
-<span style="color:#ae81ff">;</span>
-@       <span style="color:#ae81ff">IN      NS      ns1.novodominio.com.</span>
-@       <span style="color:#ae81ff">IN      NS      ns2.novodominio.com.</span>
-@       <span style="color:#ae81ff">IN      A       127.0.0.1</span>
-@       <span style="color:#ae81ff">IN      AAAA    ::1</span>
-
-<span style="color:#ae81ff">ns1             A       10.0.10.1   ; Change to the desired NS1 IP</span>
-<span style="color:#ae81ff">ns2             A       10.0.10.2   ; Change to the desired NS2 IP</span>
-</code></pre></div><p>Com o nosso arquivo de zona criado, vamos adicionar ele no <strong>named.conf.default-zones</strong> e realizar as configurações necessários.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vi /opt/bind9/primary/bind/etc/named.conf.default-zones
-</code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o <strong>IP do NS2 no allow-transfer</strong>, com isso o DNS Secundário receberá as informações do DNS Primário.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">; BIND data file for local loopback interface</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">$TTL    604800</span>
+</span></span><span style="display:flex;"><span>@       <span style="color:#ae81ff">IN      SOA     novodominio.com. root.novodominio.com. (</span>
+</span></span><span style="display:flex;"><span>                              <span style="color:#ae81ff">1</span>         <span style="color:#ae81ff">; Serial</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#ae81ff">604800</span>         <span style="color:#ae81ff">; Refresh</span>
+</span></span><span style="display:flex;"><span>                          <span style="color:#ae81ff">86400</span>         <span style="color:#ae81ff">; Retry</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#ae81ff">2419200</span>         <span style="color:#ae81ff">; Expire</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#ae81ff">604800</span> <span style="color:#ae81ff">)       ; Negative Cache TTL</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">;</span>
+</span></span><span style="display:flex;"><span>@       <span style="color:#ae81ff">IN      NS      ns1.novodominio.com.</span>
+</span></span><span style="display:flex;"><span>@       <span style="color:#ae81ff">IN      NS      ns2.novodominio.com.</span>
+</span></span><span style="display:flex;"><span>@       <span style="color:#ae81ff">IN      A       127.0.0.1</span>
+</span></span><span style="display:flex;"><span>@       <span style="color:#ae81ff">IN      AAAA    ::1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">ns1             A       10.0.10.1   ; Change to the desired NS1 IP</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">ns2             A       10.0.10.2   ; Change to the desired NS2 IP</span>
+</span></span></code></pre></div><p>Com o nosso arquivo de zona criado, vamos adicionar ele no <strong>named.conf.default-zones</strong> e realizar as configurações necessários.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ vi /opt/bind9/primary/bind/etc/named.conf.default-zones
+</span></span></code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o <strong>IP do NS2 no allow-transfer</strong>, com isso o DNS Secundário receberá as informações do DNS Primário.</p>
 <p>O resultado da alteração será a seguinte.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-<span style="color:#ae81ff">zone &#34;novodominio.com&#34; { // Change to desired zone</span>
-        <span style="color:#ae81ff">type master;</span>
-        <span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;; // Change to zone file path</span>
-        <span style="color:#ae81ff">allow-transfer {10.0.10.2; };        // Change to Secondary DNS IP</span>
-<span style="color:#ae81ff">//      allow-update {</span>
-<span style="color:#ae81ff">//          key &#34;example.com&#34;;</span>
-<span style="color:#ae81ff">//  };</span>
-}<span style="color:#ae81ff">;</span>
-...
-</code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso novo DNS.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd /opt/bind9/
-
-$ docker-compose up -d
-</code></pre></div><p>Para verificar se o container iniciou corretamente. Execute um <strong>docker ps -a</strong> e veja o status ou <strong>docker-compose logs -f</strong> e veja o log.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">zone &#34;novodominio.com&#34; { // Change to desired zone</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">type master;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;; // Change to zone file path</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">allow-transfer {10.0.10.2; };        // Change to Secondary DNS IP</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">//      allow-update {</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">//          key &#34;example.com&#34;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">//  };</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#ae81ff">;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso novo DNS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd /opt/bind9/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ docker-compose up -d
+</span></span></code></pre></div><p>Para verificar se o container iniciou corretamente. Execute um <strong>docker ps -a</strong> e veja o status ou <strong>docker-compose logs -f</strong> e veja o log.</p>
 <h2 id="configurar-o-servidor-dns-secundário">Configurar o servidor DNS secundário</h2>
 <p>A configuração do Servidor DNS secundário será bem parecido com o primário, porém mais simples.</p>
 <p>Dentro da máquina <strong>ns2 (IP 10.0.10.2)</strong>, vamos realizar as seguintes ações</p>
 <p>Para padronizar a instalação, vamos usar com base o diretório /opt</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd /opt
-</code></pre></div><p>Vamos realizar o clone do projeto no github, usaremos a estrutura de exemplo do projeto para ajudar na configuração.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/labbsr0x/docker-dns-bind9.git
-</code></pre></div><p>Criaremos um diretório que será utilizado como volume do DNS</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mkdir /opt/bind9
-</code></pre></div><p>Vamos copiar a estrutura de diretório do DNS secundário para o diretório que usaremos como volume do container e copiar também o arquivo de docker-compose</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cp -r /opt/docker-dns-bind9/example/secondary /opt/bind9/.
-
-$ cp /opt/docker-dns-bind9/docker-compose.yml /opt/bind9/.
-</code></pre></div><h3 id="alterações-nas-configurações-1">Alterações nas configurações</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd /opt
+</span></span></code></pre></div><p>Vamos realizar o clone do projeto no github, usaremos a estrutura de exemplo do projeto para ajudar na configuração.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git clone https://github.com/labbsr0x/docker-dns-bind9.git
+</span></span></code></pre></div><p>Criaremos um diretório que será utilizado como volume do DNS</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mkdir /opt/bind9
+</span></span></code></pre></div><p>Vamos copiar a estrutura de diretório do DNS secundário para o diretório que usaremos como volume do container e copiar também o arquivo de docker-compose</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cp -r /opt/docker-dns-bind9/example/secondary /opt/bind9/.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cp /opt/docker-dns-bind9/docker-compose.yml /opt/bind9/.
+</span></span></code></pre></div><h3 id="alterações-nas-configurações-1">Alterações nas configurações</h3>
 <p>Agora vamos alterar as configurações necessárias para configurar o Bind9.
 Começaremos editando o docker-compose.yml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vi /opt/bind9/docker-compose.yml
-</code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/secondary</strong>, ficando da seguinte forma.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-    <span style="color:#f92672">volumes</span>:
-    - <span style="color:#ae81ff">/opt/bind9/secondary:/data</span> <span style="color:#75715e"># Change volume path </span>
-</code></pre></div><p>No caso do DNS Secundário, ele replica as entradas do DNS Primário, com isso não é necessário criar o arquivo db.novodominio.com.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ vi /opt/bind9/docker-compose.yml
+</span></span></code></pre></div><p>Vamos alterar o caminho do volume de origem, onde está <strong>./bind9</strong> vamos trocar para <strong>/opt/bind9/secondary</strong>, ficando da seguinte forma.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">/opt/bind9/secondary:/data</span> <span style="color:#75715e"># Change volume path </span>
+</span></span></code></pre></div><p>No caso do DNS Secundário, ele replica as entradas do DNS Primário, com isso não é necessário criar o arquivo db.novodominio.com.
 Sendo necessário só alterar o arquivo <strong>named.conf.default-zones</strong> e realizar as configurações necessárias.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ vi /opt/bind9/secondary/bind/etc/named.conf.default-zones
-</code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o IP do NS1 na campo master, com isso o DNS Secundário sabe qual é o DNS Primário.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ vi /opt/bind9/secondary/bind/etc/named.conf.default-zones
+</span></span></code></pre></div><p>No lugar que estiver a zona <strong>example.com</strong> vamos alterar para <strong>novodominio.com</strong>, colocaremos o caminho do arquivo de zona alterando de <strong>db.example.com</strong> para <strong>db.novodominio.com</strong> e por último, colocamos o IP do NS1 na campo master, com isso o DNS Secundário sabe qual é o DNS Primário.</p>
 <p>O resultado da alteração será a seguinte.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
-<span style="color:#ae81ff">zone &#34;novodominio.com&#34; {  // Change to desired zone</span>
-	<span style="color:#ae81ff">type slave;</span>
-	<span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;;	// Change to zone file path</span>
-	<span style="color:#ae81ff">masters {10.0.10.1;};				          // Change to Primary DNS IP</span>
-}<span style="color:#ae81ff">;</span>
-...
-</code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso DNS Secundário.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ cd /opt/bind9/
-
-$ docker-compose up -d
-</code></pre></div><p>Para verificar se o container iniciou corretamente. Execute um <strong>docker ps -a</strong> e veja o status ou <strong>docker-compose logs -f</strong> e veja o log.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">zone &#34;novodominio.com&#34; {  // Change to desired zone</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ae81ff">type slave;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ae81ff">file &#34;/etc/bind/db.novodominio.com&#34;;	// Change to zone file path</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ae81ff">masters {10.0.10.1;};				          // Change to Primary DNS IP</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#ae81ff">;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Vamos para dentro do diretório que está o docker-compose.yml e iniciaremos o nosso DNS Secundário.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd /opt/bind9/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ docker-compose up -d
+</span></span></code></pre></div><p>Para verificar se o container iniciou corretamente. Execute um <strong>docker ps -a</strong> e veja o status ou <strong>docker-compose logs -f</strong> e veja o log.</p>
 <h2 id="testando-nosso-dns">Testando nosso DNS</h2>
 <p>Vamos realizar um teste com o comando <strong>dig</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dig -t ns novodominio.com @localhost +short
-
-ns1.novodominio.com.
-ns2.novodominio.com.
-</code></pre></div><h1 id="conclusão">Conclusão</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ dig -t ns novodominio.com @localhost +short
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ns1.novodominio.com.
+</span></span><span style="display:flex;"><span>ns2.novodominio.com.
+</span></span></code></pre></div><h1 id="conclusão">Conclusão</h1>
 <p>Enfim, ao final desse processo, teremos dois servidores de DNS, primário e secundário prontos para uso.
 Basta agora adicionar os hosts necessários para resolução de nomes.</p>
 
