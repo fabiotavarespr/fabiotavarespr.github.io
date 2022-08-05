@@ -6,19 +6,7 @@
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Fri, 04 Mar 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Diferença entre Alter Table no Mysql</title>
-      <link>https://fabiotavarespr.dev/posts/diferenca-entre-alter-table-mysql/</link>
-      <pubDate>Fri, 04 Mar 2022 18:00:00 +0000</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/posts/diferenca-entre-alter-table-mysql/</guid>
-      <description>MySQL ALTER TABLE: ALTER vs CHANGE vs MODIFY COLUMN Sempre que tenho que realizar uma alteração de coluna no MySQL (atividade que não é tão frequente), eu acabou esquecendo a diferença entre ALTER COLUMN, CHANGE COLUMN e MODIFY COLUMN.
-Aqui vai uma referência para ajudar a relembrar.
-ALTER COLUMN Usado para definir ou remover o valor padrão de uma coluna.
-ALTER TABLE nomeTabela ALTER COLUMN foo SET DEFAULT &amp;#39;bar&amp;#39;; ALTER TABLE nomeTabela ALTER COLUMN foo DROP DEFAULT; CHANGE COLUMN Usado para renomear uma coluna, alterar seu tipo de dados.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 15 Mar 2021 12:14:01 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Cheat Sheet</title>
       <link>https://fabiotavarespr.dev/posts/docker-cheat-sheet/</link>
@@ -36,8 +24,9 @@ Lista todas as imagens docker docker images -a Lista todos os containers rodando
       <pubDate>Tue, 14 Jul 2020 18:00:00 +0000</pubDate>
       
       <guid>https://fabiotavarespr.dev/posts/configurar-dns-bind9-com-docker/</guid>
-      <description>Introdução Pré-requisitos  Infraestrutura e objetivos Configurar o servidor DNS primário  Alterações nas configurações   Configurar o servidor DNS secundário  Alterações nas configurações   Testando nosso DNS   Conclusão  Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.
-A imagem que utilizaremos neste Post é a do projeto labbsr0x/docker-dns-bind9, imagem implementada pela equipe do Labbs do Banco do Brasil.</description>
+      <description>Introdução Pré-requisitos Infraestrutura e objetivos Configurar o servidor DNS primário Alterações nas configurações Configurar o servidor DNS secundário Alterações nas configurações Testando nosso DNS Conclusão Introdução Neste tutorial, vamos configurar um servidor DNS, utilizando o BIND (bind9) a partir de uma imagem docker.
+A imagem que utilizaremos neste Post é a do projeto labbsr0x/docker-dns-bind9, imagem implementada pela equipe do Labbs do Banco do Brasil.
+Pré-requisitos Como pré-requisito, vamos precisar das duas máquinas linux com a distribuição Ubuntu com os seguintes recursos instalados.</description>
     </item>
     
     <item>
