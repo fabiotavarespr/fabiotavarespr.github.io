@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on Blog</title>
-    <link>https://fabiotavarespr.dev/tags/git/</link>
-    <description>Recent content in git on Blog</description>
+    <title>english on Blog</title>
+    <link>https://fabiotavarespr.dev/tags/english/</link>
+    <description>Recent content in english on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 03 Feb 2025 19:26:47 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2025 19:26:47 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/tags/english/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Cheat Sheet</title>
       <link>https://fabiotavarespr.dev/posts/git-cheat-sheet/</link>
@@ -16,17 +16,6 @@
       <description>Git cheat sheet Cheat sheet with useful git commands.
 Whenever I find new necessary commands I will add them.
 Configuration related commands List the variables in the global git configuration file and their values git config --global --list Set your name in the global git configuration file git config --global user.name &amp;#34;Your Name&amp;#34; Set your email in the global git configuration file git config --global user.email &amp;#34;Your Email&amp;#34; Repository related commands Initialize a new git repository git init Initialize a new git repository and set the name for the initial branch to be created git init -b &amp;lt;branch_name&amp;gt; Commands related to commits Show the state of the working directory and the staging area git status Add one file to the staging area git add &amp;lt;file_name&amp;gt; Add multiple files to the staging area git add &amp;lt;file_name&amp;gt; &amp;lt;file_name&amp;gt; &amp;lt;file_name&amp;gt; Add all files to the staging area git add .</description>
-    </item>
-    
-    <item>
-      <title>Alterando repositório remote no git</title>
-      <link>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</link>
-      <pubDate>Thu, 04 Jun 2020 11:27:07 -0300</pubDate>
-      
-      <guid>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</guid>
-      <description>Sempre que versionamos nossos código no git, utilizamos um sistema de versionamento distribuído.
-Com isso é possível alterar o repositório remoto do gitlab para o github ou vice-versa, sem perder o histórico de alteração, como os commits, quem alterou e o que alterou, resumindo, toda a rastreabilidade das alterações versionadas.
-Como fazemos isso? Para exemplificar, vamos utilizar o repositório criado para esse post no github e levar para o gitlab. O repositório é alterando-repositorio.</description>
     </item>
     
   </channel>

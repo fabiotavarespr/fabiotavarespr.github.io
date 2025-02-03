@@ -6,7 +6,18 @@
     <description>Recent content in cheatsheet on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Fri, 04 Mar 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2025 19:26:47 +0000</lastBuildDate><atom:link href="https://fabiotavarespr.dev/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Cheat Sheet</title>
+      <link>https://fabiotavarespr.dev/posts/git-cheat-sheet/</link>
+      <pubDate>Mon, 03 Feb 2025 19:26:47 +0000</pubDate>
+      
+      <guid>https://fabiotavarespr.dev/posts/git-cheat-sheet/</guid>
+      <description>Git cheat sheet Cheat sheet with useful git commands.
+Whenever I find new necessary commands I will add them.
+Configuration related commands List the variables in the global git configuration file and their values git config --global --list Set your name in the global git configuration file git config --global user.name &amp;#34;Your Name&amp;#34; Set your email in the global git configuration file git config --global user.email &amp;#34;Your Email&amp;#34; Repository related commands Initialize a new git repository git init Initialize a new git repository and set the name for the initial branch to be created git init -b &amp;lt;branch_name&amp;gt; Commands related to commits Show the state of the working directory and the staging area git status Add one file to the staging area git add &amp;lt;file_name&amp;gt; Add multiple files to the staging area git add &amp;lt;file_name&amp;gt; &amp;lt;file_name&amp;gt; &amp;lt;file_name&amp;gt; Add all files to the staging area git add .</description>
+    </item>
+    
     <item>
       <title>Diferença entre Alter Table no Mysql</title>
       <link>https://fabiotavarespr.dev/posts/diferenca-entre-alter-table-mysql/</link>

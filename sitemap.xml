@@ -3,24 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://fabiotavarespr.dev/</loc>
-    <lastmod>2022-03-04T18:00:00+00:00</lastmod>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/tags/cheatsheet/</loc>
-    <lastmod>2022-03-04T18:00:00+00:00</lastmod>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/english/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/git/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/posts/git-cheat-sheet/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/posts/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/reference/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
+  </url><url>
+    <loc>https://fabiotavarespr.dev/tags/</loc>
+    <lastmod>2025-02-03T19:26:47+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/posts/diferenca-entre-alter-table-mysql/</loc>
     <lastmod>2022-03-04T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/tags/mysql/</loc>
-    <lastmod>2022-03-04T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/posts/</loc>
-    <lastmod>2022-03-04T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/tags/reference/</loc>
-    <lastmod>2022-03-04T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/tags/</loc>
     <lastmod>2022-03-04T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/tags/docker/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2020-07-14T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/posts/alterando-repositorios-git/</loc>
-    <lastmod>2020-06-04T11:27:07-03:00</lastmod>
-  </url><url>
-    <loc>https://fabiotavarespr.dev/tags/git/</loc>
     <lastmod>2020-06-04T11:27:07-03:00</lastmod>
   </url><url>
     <loc>https://fabiotavarespr.dev/tags/versionamento/</loc>
