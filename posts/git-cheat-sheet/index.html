@@ -94,7 +94,7 @@
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          1 min read
+          3 min read
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -141,6 +141,90 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git log
 </span></span></code></pre></div><h3 id="show-a-list-of-commits-in-reverse-chronological-order-with-the-commit-message">Show a list of commits in reverse chronological order with the commit message</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git log --oneline
+</span></span></code></pre></div><h2 id="commands-related-to-branches">Commands related to branches</h2>
+<h3 id="list-all-local-branches">List all local branches</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><h3 id="list-all-local-branches-remotes-and-local">List all local branches remotes and local</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git branch --all
+</span></span></code></pre></div><h3 id="create-a-new-branch">Create a new branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git branch &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="switch-to-a-branch">Switch to a branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git switch &lt;branch_name&gt;
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git checkout &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="create-a-new-branch-and-switch-to-it">Create a new branch and switch to it</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git checkout -b &lt;branch_name&gt;
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git switch -c &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="delete-a-branch">Delete a branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git branch -d &lt;branch_name&gt;
+</span></span></code></pre></div><h2 id="commands-related-to-merge">Commands related to merge</h2>
+<h3 id="merge-a-branch-into-the-current-branch">Merge a branch into the current branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git merge &lt;branch_name&gt;
+</span></span></code></pre></div><h2 id="commands-related-to-remote-repositories">Commands related to remote repositories</h2>
+<h3 id="add-a-remote-repository">Add a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git remote add &lt;remote_name&gt; &lt;remote_url&gt;
+</span></span></code></pre></div><h3 id="upload-changes-to-a-remote-repository">Upload changes to a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push &lt;remote_name&gt; &lt;branch_name&gt;
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push
+</span></span></code></pre></div><h3 id="list-the-remote-repositories-connected-stored-to-the-local-repository-by-short-name">List the remote repositories connected stored to the local repository by short name</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git remote
+</span></span></code></pre></div><h3 id="list-the-remote-repositories-connected-in-the-local-repository-with-short-name-and-url">List the remote repositories connected in the local repository with short name and URL</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git remote -v
+</span></span></code></pre></div><h3 id="clone-a-remote-repository">Clone a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone &lt;remote_url&gt; &lt;local_directory&gt;
+</span></span></code></pre></div><h3 id="download-changes-from-a-remote-repository">Download changes from a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git fetch
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git fetch &lt;remote_name&gt;
+</span></span></code></pre></div><h3 id="delete-a-remote-branch">Delete a remote branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push &lt;remote_name&gt; --delete &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="remove-remote-tracking-branches-that-correspond-to-deleted-remote-branches-and-download-changes-from-a-remote-repository">Remove remote-tracking branches that correspond to deleted remote branches and download changes from a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git fetch --prune
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git fetch -p
+</span></span></code></pre></div><h3 id="fetch-and-integrate-changes-from-a-remote-repository">Fetch and integrate changes from a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git pull &lt;remote_name&gt; &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="if-an-upstream-branch-is-defined-fetch-and-integrate-changes-from-a-remote-repository">If an upstream branch is defined, fetch and integrate changes from a remote repository</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git pull
+</span></span></code></pre></div><h2 id="commands-related-to-merge-1">Commands related to merge</h2>
+<h3 id="merge-a-branch-into-the-current-branch-1">Merge a branch into the current branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git merge
+</span></span></code></pre></div><h3 id="stop-a-merge-in-progress">Stop a merge in progress</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git merge --abort
+</span></span></code></pre></div><h2 id="commands-related-to-rebase">Commands related to rebase</h2>
+<h3 id="rebase-the-current-branch-on-top-of-another-branch">Rebase the current branch on top of another branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git rebase &lt;branch_name&gt;
+</span></span></code></pre></div><h3 id="continue-a-rebase-in-progress-after-resolving-conflicts">Continue a rebase in progress after resolving conflicts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git rebase --continue
+</span></span></code></pre></div><h3 id="stop-a-rebase-in-progress">Stop a rebase in progress</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git rebase --abort
+</span></span></code></pre></div><h3 id="restore-a-file-to-another-version-of-the-file-in-the-staging-area">Restore a file to another version of the file in the staging area</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git restore --staged &lt;file_name&gt;
+</span></span></code></pre></div><h2 id="commands-related-to-stash">Commands related to stash</h2>
+<h3 id="save-changes-in-the-working-directory-and-staging-area-in-a-stash">Save changes in the working directory and staging area in a stash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash
+</span></span></code></pre></div><h3 id="list-all-stashes">List all stashes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash list
+</span></span></code></pre></div><h3 id="create-a-stash-with-a-message">Create a stash with a message</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash save &lt;message&gt;
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash create &lt;message&gt;
+</span></span></code></pre></div><h3 id="apply-the-changes-in-the-last-stash-to-the-working-directory-and-staging-area">Apply the changes in the last stash to the working directory and staging area</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash apply
+</span></span></code></pre></div><h3 id="apply-the-changes-in-the-last-stash-to-the-working-directory-and-staging-area-and-remove-the-stash">Apply the changes in the last stash to the working directory and staging area and remove the stash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash pop
+</span></span></code></pre></div><h3 id="apply-the-changes-in-a-specific-stash-to-the-working-directory-and-staging-area">Apply the changes in a specific stash to the working directory and staging area</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash apply stash@<span style="color:#f92672">{</span>&lt;stash_number&gt;<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="apply-the-changes-in-a-specific-stash-to-the-working-directory-and-staging-area-and-remove-the-stash">Apply the changes in a specific stash to the working directory and staging area and remove the stash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash pop stash@<span style="color:#f92672">{</span>&lt;stash_number&gt;<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="remove-the-last-stash">Remove the last stash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash drop
+</span></span></code></pre></div><h3 id="remove-a-specific-stash">Remove a specific stash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash drop stash@<span style="color:#f92672">{</span>&lt;stash_number&gt;<span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="clear-all-stashes">Clear all stashes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git stash clear
 </span></span></code></pre></div>
     </div>
     <div class="post-footer">
